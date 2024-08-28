@@ -14,7 +14,7 @@
       <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -32,46 +32,66 @@
             </li>
         </ul>
     </nav>
+ 
+     <!--Responsive side NavBar-->
+     <section id="sidenav" class="bg-green-100 fixed z-20 top-0" style="width: 50%;height:100vh;right: -50%;">
 
+ 
+        <div class="text-right p-5">
+            <p id="close" class="inline cursor-pointer">X</p>
+        </div>
+                <ul class="flex flex-col gap-10 items-center text-gray-600">
+                    <li>
+                        <a class="hover:underline  hover:text-black" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:underline  hover:text-black" href="product.html">Products</a>
+                    </li>
+                    <li>
+                        <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+        
+            </section>
     <!--Header-->
     <section class="text-center">
         <h1 class="font-bold text-3xl mt-5">Our Products</h1>
-        <input type="text" class=" p-2 m-3 w-2 border border-black" style="width: 80%;" placeholder="Search for a Product...">
+        <input id="search" type="text" class=" p-2 m-3 w-2 border border-black" style="width: 80%;" placeholder="Search for a Product...">
     </section>
 
     <!--images-->
     <section class="p-4 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5">
-            <div class>
-                <img src="./images/b1.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
+        <div id="product_container" class="grid grid-cols-2 mt-5 md:grid-cols-4 mt-5">
+            <div>
+                <img src="./images/b1.png" class="inline hover:shadow-xl transform hover:-translate-y-2 ">
                 <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/b2.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Lily Plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/b3.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <img src="./images/b3.png" class="inline hover:shadow-xl transform hover:-translate-y-2 sm:mt-2">
+                <h1>Snake Plant</h1>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/b4.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Jasmine Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/b5.png" class="mt-5 inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Small Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
                 <img src="./images/b6.png" class="mt-5 inline hover:shadow-xl transform hover:-translate-y-2">
-                <h1>Rose Plant</h1>
+                <h1>Pot plant</h1>
                 <p>$20</p>
             </div>
 
@@ -96,6 +116,6 @@
         <h1 class="text-3xl font-bold mb-3">GreenDen</h1>
         <p class="mb-3">About- GreenDen,Natural and Artificial flowers for special Occasion</p>
     </section>
-    
+    <script src="./product.js"></script>
 </body>
 </html>
